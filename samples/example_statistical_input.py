@@ -7,6 +7,7 @@ fig.add_axes(ax)
 windRose = np.loadtxt('amalia_directionally_averaged_speeds.txt')
 indexes = np.where(windRose[:, 1] > 0.1)
 windDirections = windRose[indexes[0], 0]
+windSpeeds = windRose[indexes[0], 1] 
 # windSpeeds = windRose[indexes[0], 1] * 2 / np.sqrt(np.pi)  # convert from mean wind speed to weibull scale factor
 windFrequencies = windRose[indexes[0], 2]
 size = len(windDirections)
